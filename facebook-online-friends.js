@@ -14,6 +14,9 @@ setTimeout(function () {
         const csr = require("CSRBitMap").toCompressedString();
         const fb_dtsg = require('DTSGInitialData').token;
 
+        var time = new Date();
+
+
         var header = new Headers();
         header.append("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36");
         header.append("Content-Type", "application/x-www-form-urlencoded");
@@ -34,6 +37,7 @@ setTimeout(function () {
         console.log('%cFacebook online friends getter - Author: Nguyen Khai Hoan - https://fb.com/te.nguyenku', 'background: #222; color: #bada55;font-size: 30px');
         console.log(`%cĐể script hoạt động chuẩn nhất, bạn hãy vào trang https://fb.com trước sau đó mới sử dụng script này!
                 Lưu ý: Script này hiện tại chưa lấy được hết đầy đủ danh sách người online!`, 'background: #222; color: #FFD700;font-size: 15px')
+        console.log(`Script time: ${time}`);
         console.log('Đang xử lý dữ liệu....');
         await fetch(request).then(response => response.json()).then(data => {
             if (data) {
